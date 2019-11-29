@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Header2.qml</file>
+        <file>img/Header.png</file>
+        <file>ListItemHome.qml</file>
+        <file>DetailItem.qml</file>
+        <file>GetTimeAndDate.qml</file>
+        <file>data/data.json</file>
+        <file>main.cpp</file>
+        <file>ItemModel.qml</file>
+        <file>ItemPathImageDetail.qml</file>
+        <file>fonts/Lora-Bold.ttf</file>
+        <file>fonts/Lora-BoldItalic.ttf</file>
+        <file>fonts/Lora-Italic.ttf</file>
+        <file>fonts/Lora-Regular.ttf</file>
+        <file>fonts/Merriweather-Black.ttf</file>
+        <file>fonts/Merriweather-BlackItalic.ttf</file>
+        <file>fonts/Merriweather-Bold.ttf</file>
+        <file>fonts/Merriweather-BoldItalic.ttf</file>
+        <file>fonts/Merriweather-Italic.ttf</file>
+        <file>fonts/Merriweather-Light.ttf</file>
+        <file>fonts/Merriweather-LightItalic.ttf</file>
+        <file>fonts/Merriweather-Regular.ttf</file>
+        <file>fonts/OFL.txt</file>
+        <file>RosButton.qml</file>
+        <file>RectContainImg.qml</file>
+        <file>QuickMenu.qml</file>
+        <file>RosMap.qml</file>
+        <file>FloatingMapButton.qml</file>
+        <file>MainInHome.qml</file>
+        <file>NavigationBarLeft.qml</file>
+        <file>ButtonNavBar.qml</file>
+        <file>HoverNavLeft.qml</file>
+        <file>Header.qml</file>
+        <file>DetailItemInHome.qml</file>
+        <file>MainInSchool.qml</file>
+        <file>MainInMap.qml</file>
+        <file>RectContainImgRelative.qml</file>
+    </qresource>
+    <qresource prefix="/files"/>
+</RCC>

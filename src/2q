@@ -1,0 +1,34 @@
+#ifndef ROSINTEGRATION_H
+#define ROSINTEGRATION_H
+
+#include <QFile>
+#include <QTextStream>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QString>
+#include <QDebug>
+#include <QJsonArray>
+#include <QList>
+#include <QObject>
+#include <QQmlEngine>
+#include <QDir>
+
+class RosIntegration : public QObject{
+    Q_OBJECT
+    Q_PROPERTY(int numItem READ numItem WRITE setNumItem NOTIFY numItemChanged)
+    Q_PROPERTY(int numImgDetail READ numImgDetail WRITE setNumImgDetail NOTIFY numImgDetailChanged)
+    Q_PROPERTY(QList<QString> listTitle READ listTitle WRITE setListTitle NOTIFY listTitleChanged)
+    Q_PROPERTY(QList<QString> listSrcThum READ listSrcThum WRITE setListSrcThum NOTIFY listSrcThumChanged)
+    Q_PROPERTY(QString textDetail READ textDetail WRITE setTextDetail NOTIFY textDetailChanged)
+    Q_PROPERTY(int indexItem READ indexItem WRITE setIndexItem NOTIFY indexItemChanged)
+    Q_PROPERTY(QStringList listImgDetail READ listImgDetail WRITE setListImgDetail NOTIFY listImgDetailChanged)
+
+public:
+    explicit DataJson(QObject *parent = 0);
+    Q_INVOKABLE void leadToObject();
+    Q_INVOKABLE void presentObject();
+    void setScreenPresentTopic()
+    void 
+};
+
+#endif
