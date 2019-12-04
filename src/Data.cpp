@@ -34,7 +34,7 @@ void Data::readJson()
     QList<QString> temp_listTitle, temp_listSrcThum;
     for(int i = 0; i < list.length(); i++){
         QMap<QString, QVariant> map = list[i].toMap();
-        temp_listTitle.append(map["title"].toString());
+        temp_listTitle.append(map["title_vi"].toString());
         temp_listSrcThum.append(map["thumbnail"].toString());
     }
     setListTitle(temp_listTitle);
@@ -48,89 +48,89 @@ void Data::readJson()
 
 void Data::readFileExcel()
 {
-    using namespace libxl;
-//    qDebug() << "reading file excel";
-    Book* book = xlCreateBook();
-    if(book)
-    {
-//        qDebug() << "dirApp: " << dirApp();
-        QString dirFileXls = dirApp() + "data/data.xls";
-        const char *name = dirFileXls.toLocal8Bit().data(); // convert Qstring to char*
-        if(book->load(name))
-        {
-            Sheet* sheet = book->getSheet(0); // load sheet 1
-            qDebug() << "load book";
-            if(sheet)
-            {
-                int row = 1;
-                int colTiltle = 1;
-                int colThumbnail = 2;
-                QList<QString> temp_listTitle, temp_listSrcThum;
-                while(1){
-                    // get string from [row, col] in file excel
-                    const char* tittle = sheet->readStr(row, colTiltle);
+//    using namespace libxl;
+////    qDebug() << "reading file excel";
+//    Book* book = xlCreateBook();
+//    if(book)
+//    {
+////        qDebug() << "dirApp: " << dirApp();
+//        QString dirFileXls = dirApp() + "data/data.xls";
+//        const char *name = dirFileXls.toLocal8Bit().data(); // convert Qstring to char*
+//        if(book->load(name))
+//        {
+//            Sheet* sheet = book->getSheet(0); // load sheet 1
+//            qDebug() << "load book";
+//            if(sheet)
+//            {
+//                int row = 1;
+//                int colTiltle = 1;
+//                int colThumbnail = 2;
+//                QList<QString> temp_listTitle, temp_listSrcThum;
+//                while(1){
+//                    // get string from [row, col] in file excel
+//                    const char* tittle = sheet->readStr(row, colTiltle);
 
-                    if(tittle){
-//                        qDebug() << tittle;
-                        temp_listTitle.append(tittle);
-                    }else{
-                        break;
-                    }
-                    const char* srcThum = sheet->readStr(row, colThumbnail);
+//                    if(tittle){
+////                        qDebug() << tittle;
+//                        temp_listTitle.append(tittle);
+//                    }else{
+//                        break;
+//                    }
+//                    const char* srcThum = sheet->readStr(row, colThumbnail);
 
-                    if(srcThum){
-                        QString dir = "/data/" + QString::number(row) + "/img/" + srcThum;
-                        temp_listSrcThum.append(dir);
-                    }else{
-                        break;
-                    }
-                    row++;
-                }
-                //qDebug() << "row: " << row;
-                int sumItem = row - 1;
-                setNumItem(sumItem);
-                setListTitle(temp_listTitle);
-                setListSrcThum(temp_listSrcThum);
-            }
-            Sheet* sheet2 = book->getSheet(1); // load sheet 2
-            if(sheet2){
-                qDebug() << "loaded sheet 2";
-                int row = 1;
-                int colSrc = 0;
-                int colTit = 1;
-                int index = 1;
-                QStringList temp_listSrc, temp_listTit;
-                arrayListTitleImgDetail.clear();
-                arrayListSrcImgDetail.clear();
-                while(1){
-                    const char* src = sheet2->readStr(row, colSrc);
-                    if(src){
-//                        qDebug() << src;
-                        string str(src);
-                        int index_in_excel = splitNumberFromString(str);
-                        if(index_in_excel != index){
-                            arrayListSrcImgDetail.append(temp_listSrc);
-                            arrayListTitleImgDetail.append(temp_listTit);
-                            temp_listSrc.clear();
-                            temp_listTit.clear();
-                            index++;
-                        }
-                        temp_listSrc.append(src);
-                        const char* tit = sheet2->readStr(row, colTit);
-                        temp_listTit.append(tit);
-                    }else{
-                        arrayListSrcImgDetail.append(temp_listSrc);
-                        arrayListTitleImgDetail.append(temp_listTit);
-                        break;
-                    }
-                    row++;
-                }
-//                qDebug() << arrayListTitleImgDetail;
-            }
-        }
+//                    if(srcThum){
+//                        QString dir = "/data/" + QString::number(row) + "/img/" + srcThum;
+//                        temp_listSrcThum.append(dir);
+//                    }else{
+//                        break;
+//                    }
+//                    row++;
+//                }
+//                //qDebug() << "row: " << row;
+//                int sumItem = row - 1;
+//                setNumItem(sumItem);
+//                setListTitle(temp_listTitle);
+//                setListSrcThum(temp_listSrcThum);
+//            }
+//            Sheet* sheet2 = book->getSheet(1); // load sheet 2
+//            if(sheet2){
+//                qDebug() << "loaded sheet 2";
+//                int row = 1;
+//                int colSrc = 0;
+//                int colTit = 1;
+//                int index = 1;
+//                QStringList temp_listSrc, temp_listTit;
+//                arrayListTitleImgDetail.clear();
+//                arrayListSrcImgDetail.clear();
+//                while(1){
+//                    const char* src = sheet2->readStr(row, colSrc);
+//                    if(src){
+////                        qDebug() << src;
+//                        string str(src);
+//                        int index_in_excel = splitNumberFromString(str);
+//                        if(index_in_excel != index){
+//                            arrayListSrcImgDetail.append(temp_listSrc);
+//                            arrayListTitleImgDetail.append(temp_listTit);
+//                            temp_listSrc.clear();
+//                            temp_listTit.clear();
+//                            index++;
+//                        }
+//                        temp_listSrc.append(src);
+//                        const char* tit = sheet2->readStr(row, colTit);
+//                        temp_listTit.append(tit);
+//                    }else{
+//                        arrayListSrcImgDetail.append(temp_listSrc);
+//                        arrayListTitleImgDetail.append(temp_listTit);
+//                        break;
+//                    }
+//                    row++;
+//                }
+////                qDebug() << arrayListTitleImgDetail;
+//            }
+//        }
 
-        book->release();
-    }
+//        book->release();
+//    }
 
 }
 
@@ -140,7 +140,7 @@ void Data::readTextDetail()
 {
     QFile file;
     QString tmp_index = QString::number(m_indexItem);
-    QString fileName_tmp = m_dirApp + "data/" + tmp_index +"/detail.txt";
+    QString fileName_tmp = m_dirApp + "/data/" + tmp_index +"/detail.txt";
     //    qDebug() << tmp_index;
     //    qDebug() << fileName_tmp;
     file.setFileName(fileName_tmp);
@@ -163,7 +163,8 @@ void Data::readSrcAndTitDetail()
 
 void Data::readData()
 {
-    readFileExcel();
+//    readFileExcel();
+    readJson();
 }
 
 QStringList Data::getAllImgInFolder(QString dirFolder)
@@ -184,7 +185,7 @@ QStringList Data::getAllImgInFolder(QString dirFolder)
 void Data::readListImgDetail()
 {
     QString tmp_index = QString::number(m_indexItem + 1);
-    QString dir_tmp = m_dirApp + "data/" + tmp_index + "/img";
+    QString dir_tmp = m_dirApp + "/data/" + tmp_index + "/img";
     QStringList list_tmp_from_folder = getAllImgInFolder(dir_tmp);
 //    QStringList list_tmp_from_Excel = arrayListSrcImgDetail[m_indexItem];
 //    QStringList list_tmp;
@@ -195,6 +196,7 @@ void Data::readListImgDetail()
 //    }
     setNumImgDetail(list_tmp_from_folder.length());
     setListImgDetail(list_tmp_from_folder);
+    qDebug() << listImgDetail();
 }
 
 
@@ -286,7 +288,9 @@ void Data::setIndexItem(const int &indexItem)
         return;
 
     m_indexItem = indexItem;
-    readSrcAndTitDetail();
+
+    readListImgDetail();
+//    readSrcAndTitDetail();
 //    qDebug() << listImgDetail() << listTitleImgDetail();
     emit indexItemChanged(m_indexItem);
 }

@@ -42,7 +42,7 @@ Item {
             elide: Text.ElideRight
         }
     }
-<<<<<<< HEAD
+
     Item {
         id: viewButton
         anchors.left: viewTextTitle.right
@@ -70,7 +70,10 @@ Item {
                 textIn: "Chỉ đường"
                 color: "#2980B9"
                 onClick: RosIntegration.leadToObject(Data.indexItem)
-=======
+            }
+        }
+    }
+
     Item{
         id: groupButtonInHome
         width: 335
@@ -113,7 +116,6 @@ Item {
                     RosIntegration.leadToObject(Data.indexItem)
                     console.log("Lead to" + Data.indexItem)
                 }
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
             }
         }
     }
@@ -123,44 +125,32 @@ Item {
             name: "inDetailItemInHome"
             onCompleted: {
                 setTitle(Data.listTitle[Data.indexItem])
-<<<<<<< HEAD
                 groupButtonDetailHome.visible = true
-=======
                 groupButtonInHome.visible = true
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
             }
         },
         State {
             name: "inHome"
             onCompleted: {
                 setTitle(txtHome)
-<<<<<<< HEAD
                 groupButtonDetailHome.visible = false
-=======
                 groupButtonInHome.visible = false
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
             }
         },
         State {
             name: "inSchool"
             onCompleted: {
                 setTitle(txtSchool)
-<<<<<<< HEAD
                 groupButtonDetailHome.visible = false
-=======
                 groupButtonInHome.visible = false
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
             }
         },
         State {
             name: "inMap"
             onCompleted: {
                 setTitle(txtMap)
-<<<<<<< HEAD
                 groupButtonDetailHome.visible = false
-=======
                 groupButtonInHome.visible = false
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
             }
         }
     ]

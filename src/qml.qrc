@@ -39,4 +39,5 @@
         <file>RectContainImgRelative.qml</file>
     </qresource>
     <qresource prefix="/files"/>
+    <qresource prefix="/fonts"/>
 </RCC>

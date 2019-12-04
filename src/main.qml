@@ -6,15 +6,10 @@ import QtGraphicalEffects 1.0
 
 Window {
     id: window
-    property size sizeDisplay: Qt.size(1920, 1080)
-    property int heightHeader: 40
     //    visibility: "FullScreen"
-    //    width: sizeDisplay.width
-    //    height: sizeDisplay.height
     width: Properties.sizeDisplay.width
     height: Properties.sizeDisplay.height
     visible: true
-    //    color: "#e9ebee"
     color: "#f3f5f6"
     //    Loader{
     //        id: loader

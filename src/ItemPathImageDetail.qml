@@ -10,7 +10,8 @@ ListModel {
         for(var i = 0; i < Data.numImgDetail; i++){
             listImgPath.append({
                                    srcImgDetail: Data.listImgDetail[i],
-                                   titleImgDetail: Data.listTitleImgDetail[i]
+//                                   titleImgDetail: Data.listTitleImgDetail[i]
+                                   titleImgDetail: "title"
                                });
         }
     }

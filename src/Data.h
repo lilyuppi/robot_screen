@@ -11,7 +11,7 @@
 #include <QObject>
 #include <QQmlEngine>
 #include <QDir>
-#include <libxl.h>
+//#include <libxl.h>
 #include <iostream>
 
 using namespace std;
@@ -72,8 +72,8 @@ public slots:
 
 private:
     //QString m_dirApp = "/media/nvidia/ssd/catkin_ws/src/robot_screen/src/"; 
-    QString m_dirApp = QDir::currentPath() + "/src/robot_screen/src/";
-    QString m_dirFileJson = m_dirApp + "data/data.json";
+    QString m_dirApp = QDir::currentPath() + "/src/robot_screen/src";
+    QString m_dirFileJson = m_dirApp + "/data/data.json";
     QJsonDocument m_recieveJson;
     int m_numItem;
     QList<QString> m_listTitle;

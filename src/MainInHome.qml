@@ -32,7 +32,7 @@ Item {
             anchors.fill: parent
             // cellWidth: 464 = 1920 / 4,137931034
             cellWidth: 345 + 40
-    //        cellHeight: 480
+            //        cellHeight: 480
             cellHeight: 300 + 36
             flow: GridView.FlowTopToBottom
             model: ItemModel{}
@@ -80,14 +80,14 @@ Item {
                     height: parent.height / 6
                     color: "transparent"
                     Text{
-//                        horizontalAlignment: Text.AlignHCenter
+                        //                        horizontalAlignment: Text.AlignHCenter
                         anchors.top: parent.top
                         anchors.topMargin: 5
                         anchors.left: parent.left
                         anchors.leftMargin: 10
                         width: parent.width - 10
                         elide: Text.ElideRight
-//                        FontLoader { id: myCustomFont; source: "fonts/Lora-Regular.ttf" }
+                        //                        FontLoader { id: myCustomFont; source: "fonts/Lora-Regular.ttf" }
                         font.family: "lato"
                         font.pixelSize: parent.height / 3
                         text: title
@@ -104,38 +104,39 @@ Item {
                 MouseArea{
                     anchors.fill: parent
                     onClicked: {
-//                        console.log(index)
+                        //                        console.log(index)
                         Data.setIndexItem(index)
                         clickID(index)
-//                        detailItem.visible = true
-//                        detailItem.enabled = true
-//                        detailItem.updateData()
-//                        detailItemShow.start()
+                        console.log(index)
+                        //                        detailItem.visible = true
+                        //                        detailItem.enabled = true
+                        //                        detailItem.updateData()
+                        //                        detailItemShow.start()
                     }
                 }
             }
 
-//            ParallelAnimation{
-//                id: detailItemShow
-//                NumberAnimation{
-//                    target: detailItem
-//                    properties: "x"
-//                    from: sizeDisplay.width
-//                    to: 0
-//                    easing.type: Easing.OutCubic
-//                    duration: 800
-//                }
-//            }
+            //            ParallelAnimation{
+            //                id: detailItemShow
+            //                NumberAnimation{
+            //                    target: detailItem
+            //                    properties: "x"
+            //                    from: sizeDisplay.width
+            //                    to: 0
+            //                    easing.type: Easing.OutCubic
+            //                    duration: 800
+            //                }
+            //            }
         }
 
-//        DetailItem{
-//            id: detailItem
-//            sizeDisplay: Qt.size(window.width, window.height)
-//            sizeHeader: Qt.size(window.width, heightHeader)
-//            anchors.top: window.top
-//            anchors.left: window.left
-//            y:0
-//            x: window.width
-//        }
+        //        DetailItem{
+        //            id: detailItem
+        //            sizeDisplay: Qt.size(window.width, window.height)
+        //            sizeHeader: Qt.size(window.width, heightHeader)
+        //            anchors.top: window.top
+        //            anchors.left: window.left
+        //            y:0
+        //            x: window.width
+        //        }
     }
 }

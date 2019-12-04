@@ -257,16 +257,16 @@ set( QT_SOURCES
 ##############################################################################
 add_executable(robot_screen ${QT_SOURCES} ${QT_RESOURCES_CPP} ${QT_FORMS_HPP} ${QT_MOC_HPP})
 # import dynamic library
-add_library(libxl SHARED IMPORTED) #SHARED is dynamic library
-set_target_properties(
-    libxl 
-    PROPERTIES
-        IMPORTED_LOCATION /usr/lib/libxl/lib64/libxl.so
-        IMPORTED_INCLUDE_DIRECTORIES /usr/lib/libxl/include_cpp
-)
+#add_library(libxl SHARED IMPORTED) #SHARED is dynamic library
+#set_target_properties(
+#    libxl 
+#    PROPERTIES
+#        IMPORTED_LOCATION /usr/lib/libxl/lib64/libxl.so
+#        IMPORTED_INCLUDE_DIRECTORIES /usr/lib/libxl/include_cpp
+#)
 
 target_link_libraries(robot_screen
-    libxl
+        #    libxl
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
     Qt5::Core

@@ -31,12 +31,12 @@ Rectangle {
         height: 120
         Text {
             id: txtTitleImg
-<<<<<<< HEAD
+
             text: Data.listTitleImgDetail[0]
-=======
+
 //            text: "Tiêu đề ảnh"
-            text: Data.listTitle[Data.indexItem]
->>>>>>> 369b30f07c39d6d3c44a4a6bae5b5cee909598e0
+//            text: Data.listTitle[Data.indexItem]
+
             width: parent.width
             font.pixelSize: 28
             font.weight: Font.Medium
