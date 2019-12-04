@@ -74,51 +74,7 @@ Item {
         }
     }
 
-    Item{
-        id: groupButtonInHome
-        width: 335
-        height: 40
-        anchors.left: root.left
-        anchors.leftMargin: 850
-        anchors.verticalCenter: root.verticalCenter
-        visible: false
-        RosButton{
-            id: rectPresentation
-            anchors.left: parent.left
-            anchors.verticalCenter: parent.verticalCenter
-            width: 150
-            height: 40
-            img_src: "present"
-            color: "#2C3E50"
-            textIn: "Thuyết trình"
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    console.log("Present at" + Data.indexItem)
-                    RosIntegration.presentObject(Data.indexItem)
-                }
-            }
 
-        }
-        RosButton{
-            id: rectGuide
-            anchors.left: rectPresentation.right
-            anchors.leftMargin: 35
-            anchors.verticalCenter: rectPresentation.verticalCenter
-            width: rectPresentation.width
-            height: rectPresentation.height
-            img_src: "guide"
-            color: "#2980B9"
-            textIn: "Chỉ đường"
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    RosIntegration.leadToObject(Data.indexItem)
-                    console.log("Lead to" + Data.indexItem)
-                }
-            }
-        }
-    }
 
     states: [
         State {
@@ -126,7 +82,6 @@ Item {
             onCompleted: {
                 setTitle(Data.listTitle[Data.indexItem])
                 groupButtonDetailHome.visible = true
-                groupButtonInHome.visible = true
             }
         },
         State {
@@ -134,7 +89,6 @@ Item {
             onCompleted: {
                 setTitle(txtHome)
                 groupButtonDetailHome.visible = false
-                groupButtonInHome.visible = false
             }
         },
         State {
@@ -142,7 +96,6 @@ Item {
             onCompleted: {
                 setTitle(txtSchool)
                 groupButtonDetailHome.visible = false
-                groupButtonInHome.visible = false
             }
         },
         State {
@@ -150,7 +103,6 @@ Item {
             onCompleted: {
                 setTitle(txtMap)
                 groupButtonDetailHome.visible = false
-                groupButtonInHome.visible = false
             }
         }
     ]

@@ -61,6 +61,7 @@ Rectangle {
             width: 165
             height: 165
             color: "#000000"
+            opacity: 0.5
             anchors.horizontalCenter: parent.horizontalCenter
             radius: 2
         }

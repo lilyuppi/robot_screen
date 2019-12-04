@@ -184,7 +184,7 @@ QStringList Data::getAllImgInFolder(QString dirFolder)
 
 void Data::readListImgDetail()
 {
-    QString tmp_index = QString::number(m_indexItem + 1);
+    QString tmp_index = QString::number(m_indexItem);
     QString dir_tmp = m_dirApp + "/data/" + tmp_index + "/img";
     QStringList list_tmp_from_folder = getAllImgInFolder(dir_tmp);
 //    QStringList list_tmp_from_Excel = arrayListSrcImgDetail[m_indexItem];

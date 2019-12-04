@@ -2,79 +2,79 @@
     {
         "title":"Studious tradition",
         "title_vi":"Truyền thống hiếu học của dân tộc ta",
-        "detail":"/data/1/detail_vi.txt",
-	"thumbnail":"/data/1/img/1.0.jpg"
+        "detail":"/data/0/detail_vi.txt",
+	"thumbnail":"/data/0/img/1.0.jpg"
     },
     {
         "title":"The process of formation and development",
         "title_vi":"Quá trình hình thành và phát triển của Đại học Quốc gia",
-        "detail":"/data/2/detail_vi.txt",
-    	"thumbnail":"/data/2/img/2.7.jpg"
+        "detail":"/data/1/detail_vi.txt",
+    	"thumbnail":"/data/1/img/2.7.jpg"
     },
     {
         "title":"Uncle Ho and Giap Vo Nguyen's photos",
         "title_vi":"Các nhân tài xuất thân từ Đại học Quốc gia",
-        "detail":"/data/3/detail_vi.txt",
-	"thumbnail":"/data/3/img/3.1.jpg"
+        "detail":"/data/2/detail_vi.txt",
+	"thumbnail":"/data/2/img/3.1.jpg"
     },
     {
         "title":"Directors and deputy directors",
         "title_vi":"Các đời giám đốc và phó giám đốc",
-        "detail":"/data/4/detail_v.txt",
-    	"thumbnail":"/data/4/img/4.7.jpg"
+        "detail":"/data/3/detail_v.txt",
+    	"thumbnail":"/data/3/img/4.7.jpg"
     },
     {
         "title":"The care of communism party and goverment",
         "title_vi":"Sự quan tâm của Đảng và nhà nước",
-        "detail":"/data/5/detail_vi.txt",
-	"thumbnail":"/data/5/img/5.10.jpg"
+        "detail":"/data/4/detail_vi.txt",
+	"thumbnail":"/data/4/img/5.10.jpg"
     },
     {
         "title":"National University",
         "title_vi":"Đại học Quốc gia",
-        "detail":"/data/6/detail_vi.txt",
-	"thumbnail":"/data/6/img/6.0.jpg"
+        "detail":"/data/5/detail_vi.txt",
+	"thumbnail":"/data/5/img/6.0.jpg"
     },
     {
         "title":"Basic characteristics",
         "title_vi":"Các đặc trưng cơ bản",
-        "detail":"/data/7/detail_vi.txt",
-	"thumbnail":"/data/7/img/7.1.jpg"
+        "detail":"/data/6/detail_vi.txt",
+	"thumbnail":"/data/6/img/7.1.jpg"
     },
     {
         "title":"Outstanding achievements",
         "title_vi":"Những thành tựu nổi bật",
-        "detail":"/data/8/detail_vi.txt",
-	"thumbnail":"/data/8/img/8.4.jpg"
+        "detail":"/data/7/detail_vi.txt",
+	"thumbnail":"/data/7/img/8.4.jpg"
     },
     {
         "title":"International partners",
         "title_vi":"Các đối tác quốc tế",
-        "detail":"/data/9/detail_vi.txt",
-	"thumbnail":"/data/9/img/9.5.jpg"
+        "detail":"/data/8/detail_vi.txt",
+	"thumbnail":"/data/8/img/9.5.jpg"
     },
     {
         "title":"International Prize",
         "title_vi":"Các giải thưởng quốc tế",
-        "detail":"/data/10/detail_vi.txt",
-	"thumbnail":"/data/10/img/10.1.jpg"
+        "detail":"/data/9/detail_vi.txt",
+	"thumbnail":"/data/9/img/10.1.jpg"
     },
     {
         "title":"Medals",
         "title_vi":"Các huân chương",
-        "detail":"/data/11/detail_vi.txt",
-	"thumbnail":"/data/11/img/11.1.jpg"
+        "detail":"/data/10/detail_vi.txt",
+	"thumbnail":"/data/10/img/11.1.jpg"
     },
     {
         "title":"Honorary doctors",
         "title_vi":"Các tiến sĩ danh dự",
-        "detail":"/data/12/detail_vi.txt",
-	"thumbnail":"/data/12/img/12.3.jpg"
+        "detail":"/data/11/detail_vi.txt",
+	"thumbnail":"/data/11/img/12.3.jpg"
     },
     {
         "title":"Position in the international",
         "title_vi":"Vị thế quốc tế",
-        "detail":"/data/13/detail_vi.txt",
-	"thumbnail":"/data/13/img/13.6.jpg"
+        "detail":"/data/12/detail_vi.txt",
+	"thumbnail":"/data/12/img/13.6.jpg"
     }
 ]
